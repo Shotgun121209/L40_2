@@ -14,11 +14,17 @@ export default class Dino extends Actor {
             this.baseY = 0;
             this.relativeY = 0;
             this.lift = 0;
+            this.sprite = "dino";
     }
 
         get dy() {
             return this.baseY - this.height + this.
             relativeY;
+        }
+
+        reset() {
+            this.vVelocity = null;
+            this.relativeY = 0;
         }
 
         jump() {
